@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+
+:root{
+  /* COLORES */
+  --black-color: #232719;
+  --yellow-color: #EACA7F;
+  --orange-color:  #C88E4E;
+  --red-color: #D13831;
+  --green-color: #9FA67A;
+  --white-color: #EFEED1;
+  --white-color-opacity:#EFEED177;
+  /* FUENTES */
+  --title-font: 'Kurale', serif;
+  --main-font: 'Poppins';
+  /* TAMANOS */
+  --padding-section: 2rem;
+  font-size: 18px;
+
+}
+/*------ ESTILOS GENERALES ------*/
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+body {
+  background: var(--white-color);
+}
+
+header {
+  font-family: var(--title-font);
+  background: var(--yellow-color);
+  color: var(--black-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: .55rem;
+}
+
+h1, h2, h3{
+  font-variant: var(--title-font);
+}
+h2{
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: .55rem;
+}
+
+p{
+  font-family: var(--main-font);
+}
+
+/*------ BARRA DE NAVEGACION ------ver es acto putaendo*/
+.header__title{
+  margin-left: 1rem;
+}
+.navbar ul{
+  list-style: none;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.navbar__item{
+  margin:0 .4rem;
+  font-size: .9rem;
+}
+.navbar__item.active{
+  border-bottom: var(--red-color) solid 2px;
+}
+.navbar__item a{
+  color: var(--black-color);
+}
+
+/* MENSAJE MANTENCION */
+.hero__msg{
+  height: 3rem;
+  text-align: center;
+  font-size: 1rem;
+  padding: .8rem 0;
+  font-family: var(--main-font);
+  background-color: var(--red-color);
+  color: var(--white-color);
+}
+#hero__btn--close{
+  position: relative;
+  margin-left: auto;
+  width: 1.5rem;
+  top: -2.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/*-----------------------------------------------*/
+/*------ SECCION HERO ------*/
+.hero {
+  padding: var(--padding-section) 0 ;
+  background-color: var(--green-color);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.hero__img {
+  margin: auto;
+  height: 400px;
+  object-fit: contain;
+  border-radius: 10px;
+  border-top-left-radius: 145px;
+  border-top-right-radius: 145px;
+  display: none;
+}
+
+.hero__content {
+  padding-inline: var(--padding-section);
+  text-align: center;
+  color: var(--white-color);
+}
+
+.hero__title{
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  font-family: var(--title-font);
+}
+
+.hero__subtitle{
+  font-family: var(--title-font);
+  margin-bottom: 1.1rem;
+}
+
+.hero__p {
+  font-size: .8rem;
+  margin-bottom: 2.2rem;
+}
+
+.hero__btns {
+  padding-inline: 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 4rem;
+  row-gap: 1rem;
+}
+
+/* ------ SECCION SOBRE MI ------ */
+#sobre-mi {
+  background: var(--white-color);
+  color: var(--black-color);
+  padding: 5rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 3rem;
+  row-gap: 2rem;
+}
+/* ------ SECCION CARTAS ------ */
+#section-cards{
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  padding: 1rem 4rem;
+}
+
+/*------ SECCION FOOTER ------*/
+footer {
+  background: var(--yellow-color);
+  color: var(--black-color);
+  padding: 1.1rem 0 2rem;
+  text-align: center;
+  font-family: var(--title-font);
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --------------------------------------- */
+/*------ UTILITIES ------*/
+/* --- BOTONES --- */
+.btn{
+  background: var(--white-color);
+  color: var(--black-color);
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 1.1rem;
+  padding: .55rem 1.1rem;
+  text-decoration: none;
+  font-family: var(--title-font);
+  font-size: 1.1rem;
+}
+
+.btn--secondary {
+  background-color: var(--green-color);
+  color: var(--white-color);
+  border: 1px solid var(--white-color);
+}
+
+/* --- SECTION --- */
+.section__img{
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 10rem;
+}
+
+.section__title{
+  color: var(--orange-color);
+  text-align: center;
+  font-family: var(--title-font);
+}
+
+.section__txt{
+  color: var(--black-color);
+  font-weight: 400;
+  font-size: .8rem;
+  line-height: 1.3rem;
+  text-align: center;
+}
+
+
+/*--- CARD ---*/
+
+.card {
+  background: var(--yellow-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 1.1rem;
+  padding: 1.1rem;
+  min-height: 21rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title{
+  margin-bottom: 1.5rem;
+  font-family: var(--title-font);
+  font-weight: 400;
+  font-size: 1.7rem;
+  text-align: center;
+  color: var(--black-color);
+}
+
+.card__txt{
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: .9rem;
+  text-align: center;
+  color: var(--black-color);
+}
+.card__btns{
+  /* border: 2px solid #D13831; */
+  margin: auto 0 1rem 0;
+  text-align: center;
+}
+.card__btn{
+  /* width: 10rem; */
+}
+
+/*---------------------------------------------------*/
+/* ------ RESPONSIVE ------ */
+@media screen and (min-width: 30rem){
+  /*------ NAVBAR ------*/
+  .navbar__item{
+    margin: 0 1rem;
+    font-size: 1rem;
+  }
+
+  /*------ HERO ------*/
+  .hero{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero__content{
+    padding-inline: 0;
+    padding-inline-end: 10rem;
+    text-align: start;
+  }
+  .hero__img{
+    display: block;
+  }
+  .hero__btns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /*------ SECCION SOBRE MI ------*/
+  #sobre-mi{
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5rem;
+  }
+  /*------ SECCION CARDS ------*/
+  #section-cards{
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem 10rem;
+  }
+  /*------ UTILITIES ------*/
+  /* SECTION */
+  .section__img{
+    width: 80%;
+  }
+  .section__title{
+    text-align: start;
+  }
+  .section__txt{
+    text-align: start;
+  }
+  
+}
+/*--- FIN RESPONSIVE ---*/
+
+#proyectos li {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+#proyectos img {
+  max-width: 300px;
+  margin-right: 20px;
+}
+
+#musica li {
+  margin-bottom: 20px;
+}
+
+#musica audio {
+  width: 100%;
+}
+
+#contacto form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+#contacto label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#contacto input,
+#contacto textarea {
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+#contacto input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+/* Contacto */
+.contact {
+  background-color: #fff;
+  padding: 40px;
+}
+
+.contact h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.contact input,
+.contact textarea {
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.contact textarea {
+  height: 120px;
+}
+
+
+/* 
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons i {
+  color: #fff;
+  font-size: 20px;
+  line-height: 40px;
+  transition: all 0.3s ease;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+} */
+
+
