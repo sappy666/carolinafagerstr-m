@@ -9,14 +9,14 @@
 <body>
   <!-- Sección del encabezado -->
   <header>
-    <h1 class="header__title">Carolina Fagerström</h1>
+    <a href="./index.html"><img src="./assets/img/logo.png" alt="" height="130"></a>
     <nav class="navbar">
       <ul>
         <li class="navbar__item active"><a href="#">Inicio</a></li>
         <li class="navbar__item"><a href="#sobre-mi">Sobre mí</a></li>
-        <li class="navbar__item"><a href="#proyectos">Proyectos</a></li>
-        <li class="navbar__item"><a href="#musica">Clases</a></li>
-        <li class="navbar__item"><a href="#contacto">Contacto</a></li>
+        <li class="navbar__item"><a href="./multimedia.html">Proyectos</a></li>
+        <li class="navbar__item"><a href="#contact">Clases</a></li>
+        <li class="navbar__item"><a href="#contact">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -26,9 +26,9 @@
   </div>
   <!-- Sección del Hero -->
   <section class="hero">
-    <img class="hero__img" src="./assets/img/hero.jpg" alt="Imagen del hero">
+    <img class="hero__img" src="" alt="">
     <div class="hero__content">
-      <div class="hero__title">Soy Carolina</div>
+      <div class="hero__title">Hola!</div>
       <h2 class="hero__subtitle">Pianista y Compositora</h2>
       <p class="hero__p">Pianista apasionada por la música clásica y contemporánea. Mi carrera musical ha sido diversa, incluyendo recitales en solitario, colaboraciones con orquestas y participaciones en festivales internacionales de música.</p>
       <div class="hero__btns">
@@ -40,7 +40,7 @@
   
   <!-- Sección de "Sobre mí" -->
   <section id="sobre-mi">
-    <img class="section__img" src="./assets/img/sobre-mi.jpg" alt="">
+    <!-- <img class="section__img" src="./assets/img/sobre-mi.jpg" alt=""> -->
     <div class="section__content">
       <h2 class="section__title">Sobre mí</h2>
       <p class="section__txt">Pianista y compositora Viñamarina, estudió en el Instituto de Música de la Pontificia Universidad Católica de Valparaíso la cátedra de piano clásico con la profesora María Angélica Beláustegui, egresando el año 2011. Especializada en Música Docta, ha interpretado en diferentes escenarios de la V Región, con un variado repertorio de obras para piano, interpretando a Wolfgang Amadeus Mozart en su 250 aniversario de muerte y Franz Schubert en el Teatro Municipal de Valparaíso. También ha destacado su participación como miembro del jurado en el Concurso Claudio Arrau, durante el año 2017. Se ha dedicado por más de una década a la docencia, destacando a sus alumnos en conciertos anuales. Ha compuesto obras para orquesta de cuerdas y coro, siento interpretada por la Orquesta Marga Marga durante el año 2016.</p>
@@ -107,11 +107,10 @@
     </div>
   </section>
 
-  
   <!-- Sección de "Contacto" -->
-  <h2>Contacto</h2>  
-  <section class="contact">
-    <h2>Hablemos</h2>
+  <section id="contact" class="contact">
+    <h1>Contacto</h1>  
+    <!-- <h2>Hablemos</h2> -->
     <form>
       <label for="name">Nombre:</label>
       <input type="text" id="name" name="name" placeholder="Ingresa tu nombre">
@@ -122,34 +121,33 @@
       <label for="message">Mensaje:</label>
       <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí"></textarea>
   
-      <button type="submit" class="button">Enviar</button>
+      <button type="submit" class="btn btn--secondary">Enviar</button>
     </form>
   </section>
   
   <!-- Sección de "Footer" -->
   <footer>
-    <!-- <div class="social-icons">
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-instagram"></i></a>
-      <a href="#"><i class="fa fa-linkedin"></i></a>
-    </div> -->
     <nav class="navbar">
       <ul>
         <li class="navbar__item active"><a href="#">Inicio</a></li>
         <li class="navbar__item"><a href="#sobre-mi">Sobre mí</a></li>
-        <li class="navbar__item"><a href="#proyectos">Proyectos</a></li>
+        <li class="navbar__item"><a href="./multimedia.html">Proyectos</a></li>
         <li class="navbar__item"><a href="#musica">Clases</a></li>
         <li class="navbar__item"><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
     <h2>Carolina Fagerström</h2>
-    
-    <div>n° telefonico</div>
-    <div>Correo</div>
+    <div class="social">
+      <a href="wa.link/hjjlaf"><img class="social__icon" src="./assets/img/whatsapp.svg" alt=""></a>
+      <a href="https://web.facebook.com/carolina.palacios.73"><img class="social__icon" src="./assets/img/facebook.svg" alt=""></a>
+      <a href=""><img class="social__icon" src="./assets/img/mail.svg" alt=""></a>
+      <a href="https://www.youtube.com/@carolinapalacios9509"><img class="social__icon" src="./assets/img/youtube.svg" alt=""></a>
+  </div>
     <div>&copy; 2023 Coda Latam</div>
   </footer>
   <script src="./assets/js/index.js"></script>
 </body>
 </html>
-  
+
+
+
