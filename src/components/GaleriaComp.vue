@@ -12,7 +12,7 @@
                <ul id="portfolio-flters">
                   <li class="filtro filter-active" data-filter="filtro--todos">Todos</li>
                   <li class="filtro" data-filter="filtro--conciertos">Conciertos</li>
-                  <li class="filtro" data-filter="filtro--videos">Videos</li>
+                  <li class="filtro" data-filter="filtro--videos">Multimedia</li>
                </ul>
             </div>
          </div>

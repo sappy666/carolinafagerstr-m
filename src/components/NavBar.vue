@@ -17,7 +17,7 @@
                               <router-link class="nav-link" to="/journal">Conciertos</router-link>
                            </li>
                            <li>
-                              <router-link class="nav-link" to="/journal">Festivales</router-link>
+                              <router-link class="nav-link" to="/journal">Multimedia</router-link>
                            </li>
                            <!-- <li>
                               <router-link class="nav-link" to="/journal">Concursos</router-link>
