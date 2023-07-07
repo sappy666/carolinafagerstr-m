@@ -1,6 +1,6 @@
 <template>
    <!-- ======= Portfolio Section ======= -->
-   <div id="portfolio" class="paddsection">
+   <div id="portfolio" class="paddsection mt-5">
       <div class="container">
          <div class="section-title text-center">
             <h2>Obras</h2>
@@ -12,7 +12,7 @@
                <ul id="portfolio-flters">
                   <li class="filtro filter-active" data-filter="filtro--todos">Todos</li>
                   <li class="filtro" data-filter="filtro--conciertos">Conciertos</li>
-                  <li class="filtro" data-filter="filtro--videos">Videos</li>
+                  <li class="filtro" data-filter="filtro--videos">Multimedia</li>
                </ul>
             </div>
          </div>
@@ -26,10 +26,6 @@
    <!-- End Portfolio Section -->
 </template>
 <script>
-
-// import Isotope from 'isotope-layout';
-// import GLightbox from 'glightbox';
-// import Swiper from 'swiper';
 import {Obras} from '@/services/Obras'
 
 export default {
@@ -137,6 +133,7 @@ export default {
    }
    #portfolio {
    padding: 60px 0;
+   background-color: #CCC6BE;
    }
    #portfolio #portfolio-flters {
    padding: 0;

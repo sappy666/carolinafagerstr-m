@@ -4,21 +4,22 @@
          <div class="container">
             <div class="row">
                <div class="col-lg-3 col-md-6 ps-0 footer-info">
-                  <a href="index.html" class="logo"><img src="../assets/logo2.png" alt="" width="320"></a>
-                  <!-- <h3>Carolina fagerström</h3> -->
+                  <router-link class="logo" to="/"><img src="../assets/logo2.png" alt="" width="320"></router-link>
                </div>
                <div class="col-lg-3 col-md-6 footer-links">
                   <h4>Sitio</h4>
                   <ul>
-                     <li><i class="bi bi-chevron-right"></i> <a href="#">Inicio</a></li>
-                     <li><i class="bi bi-chevron-right"></i> <a href="#">Sobre Mi</a></li>
-                     <li><i class="bi bi-chevron-right"></i> <a href="#">Obras</a></li>
+                     <li><i class="bi bi-chevron-right"></i><router-link class="nav-link" to="/"> Inicio</router-link></li>
+                     <li><i class="bi bi-chevron-right"></i><router-link class="nav-link" to="/"> Sobre Mi</router-link></li>
+                     <li><i class="bi bi-chevron-right"></i><router-link class="nav-link" to="/"> Obras</router-link></li>
                   </ul>
                </div>
                <div class="col-lg-3 col-md-6 footer-contact">
                   <h4>Contactáme</h4>
                   <p>
-                     <strong>Teléfono:</strong> +56 9 7436 7083<br>
+                     <strong><i class="bi bi-telephone"></i> </strong> +56 9 7436 7083<br>
+                     <strong><i class="bi bi-envelope"></i> </strong> lanierpal@gmail.com
+
                      <!-- <strong>Email:</strong> info@<br> -->
                      <a href="https://www.youtube.com/@carolinapalacios9509"><img class="social__icon" src="../assets/youtube.svg" height="30px" alt=""></a>
                   </p>
@@ -68,7 +69,7 @@
    h4,
    h5,
    h6 {
-   font-family: "Montserrat", sans-serif;
+   font-family: "Poppins", sans-serif;
    font-weight: 400;
    margin: 0 0 20px 0;
    padding: 0;
@@ -91,8 +92,8 @@
    margin: 0 0 20px 0;
    padding: 2px 0 2px 10px;
    line-height: 1;
-   font-family: "Montserrat", sans-serif;
-   font-weight: 700;
+   font-family: "Poppins", sans-serif;
+   font-weight: 300;
    letter-spacing: 3px;
    border-left: 4px solid #D1922E;
    }
@@ -116,6 +117,7 @@
    display: inline-flex;
    align-items: center;
    justify-content: center;
+   font-family: "Poppins", sans-serif;
    }
    #footer .footer-top .social-links a i {
    line-height: 0;
@@ -176,6 +178,7 @@
    }
    #footer .footer-top .footer-contact {
    margin-bottom: 30px;
+      font-family: "Poppins", sans-serif;
    }
    #footer .footer-top .footer-contact p {
    line-height: 26px;
@@ -203,5 +206,9 @@
    }
    .social__icon{
    color: #D1922E;
+   }
+   .nav-link{
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
    }
 </style>

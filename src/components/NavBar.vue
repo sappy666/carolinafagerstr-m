@@ -9,22 +9,22 @@
                   <ul>
                      <li><router-link class="nav-link active" to="/">Inicio</router-link></li>
                      <li><router-link class="nav-link" to="/#about">Sobre mí</router-link></li>
-                     <li><router-link class="nav-link" to="/#portfolio">Obras</router-link></li>
+                     <li><router-link class="nav-link" to="/noticias">Noticias</router-link></li>
                      <li class="dropdown">
-                        <router-link class="nav-link" to="/journal">Destacados<i class="bi bi-chevron-down"></i></router-link>
+                        <router-link class="nav-link" to="/journal">Obras<i class="bi bi-chevron-down"></i></router-link>
                         <ul>
                            <li>
                               <router-link class="nav-link" to="/journal">Conciertos</router-link>
                            </li>
                            <li>
-                              <router-link class="nav-link" to="/journal">Festivales</router-link>
+                              <router-link class="nav-link" to="/journal">Multimedia</router-link>
                            </li>
-                           <li>
+                           <!-- <li>
                               <router-link class="nav-link" to="/journal">Concursos</router-link>
                            </li>
                            <li>
                               <router-link class="nav-link" to="/journal">Multimedia</router-link>
-                           </li>
+                           </li> -->
                         </ul>
                      </li>
                      <li><router-link class="nav-link" to="/#contact">Contacto</router-link></li>

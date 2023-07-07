@@ -1,21 +1,3 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import JournalView from '../views/JournalView.vue'
-import NotFoundView from '../views/NotFoundView'
-
-// Vue.use(BootstrapVue);
-const routes = [
-{
-path: "/",
-name: "HomeView",
-component:HomeView
-},
-
-{
-path: '/journal',
-name: 'JournalView',
-component: JournalView, 
-},
 
 { 
 path: '/:pathMatch(.*)*',

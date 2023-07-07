@@ -8,9 +8,9 @@
                   <div class="contact-contact">
                      <h2 class="mb-30">Contacto</h2>
                      <ul class="contact-details">
-                        <li><span>Con Cón, Chile</span></li>
-                        <li><span>+56 9 7436 7083</span></li>
-                        <li><span>lanierpal@gmail.com</span></li>
+                        <li><i class="bi bi-geo"></i><span> Con Cón, Chile</span></li>
+                        <li><i class="bi bi-telephone"></i><span> +56 9 7436 7083</span></li>
+                        <li><i class="bi bi-envelope"></i><span> lanierpal@gmail.com</span></li>
                      </ul>
                   </div>
                </div>

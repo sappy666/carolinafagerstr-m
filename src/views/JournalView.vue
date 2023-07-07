@@ -1,58 +1,14 @@
 <template>
-   <!-- ======= Journal Section ======= -->
-   <div id="journal" class="text-left paddsection">
-      <div class="container">
-         <div class="section-title text-center">
-            <h2>Blog</h2>
-         </div>
-      </div>
-      <div class="container">
-         <div class="journal-block">
-            <div class="row">
-               <div class="col-lg-4 col-md-6" v-for="entrada in entradas" :key="entrada.id">
-                  <div class="journal-info">
-                     <a :href="entrada.link"><img :src="entrada.img" class="img-responsive" alt="img"></a>
-                  </div>
-                  <div class="journal-txt">
-                     <h4><a :href="entrada.link">{{ entrada.title }}</a></h4>
-                     <p class="separator">{{entrada.text}}</p>  
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- <div class="mas__noticias"><a href=""><p>Revisa todas las noticias acá</p></a></div> -->
-   </div>
-   <!-- End Journal Section -->
+   <GaleriaComp/>
 </template>
 <script>
-// import Isotope from 'isotope-layout';
-// import GLightbox from 'glightbox';
-// import Swiper from 'swiper';
-import {Entradas} from '@/services/EntradasBlog'
-
-export default {
-  name: "JournalView",
-  data(){
-   return {
-      entradas: [],
-      cargando : false
-   } 
-  },
-  async created(){
-      try {
-         this.cargando = true;
-         this.entradas = Entradas.getEntradas();
-         this.cargando = false;
-      } catch (error) {
-         console.error(error);
-      }
-  },
-  mounted() {
-  },
-  methods: {
-  }
-};
+   import GaleriaComp from "@/components/GaleriaComp.vue"
+   export default {
+       name: "JournalView",
+       components: {
+      GaleriaComp
+      },
+   }
 </script>
 <style scoped>
    body {
@@ -92,7 +48,8 @@ export default {
    }
    /* main content */
    #journal {
-   background: #F7F7F7;
+      background-color: #CCC6BE;
+
    padding-top: 5rem;
    }
    #journal .journal-block .journal-info {
