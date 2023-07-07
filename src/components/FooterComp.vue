@@ -69,7 +69,7 @@
    h4,
    h5,
    h6 {
-   font-family: "Montserrat", sans-serif;
+   font-family: "Poppins", sans-serif;
    font-weight: 400;
    margin: 0 0 20px 0;
    padding: 0;
@@ -93,7 +93,7 @@
    padding: 2px 0 2px 10px;
    line-height: 1;
    font-family: "Poppins", sans-serif;
-   font-weight: 700;
+   font-weight: 300;
    letter-spacing: 3px;
    border-left: 4px solid #D1922E;
    }
@@ -117,6 +117,7 @@
    display: inline-flex;
    align-items: center;
    justify-content: center;
+   font-family: "Poppins", sans-serif;
    }
    #footer .footer-top .social-links a i {
    line-height: 0;
@@ -177,6 +178,7 @@
    }
    #footer .footer-top .footer-contact {
    margin-bottom: 30px;
+      font-family: "Poppins", sans-serif;
    }
    #footer .footer-top .footer-contact p {
    line-height: 26px;
@@ -204,5 +206,9 @@
    }
    .social__icon{
    color: #D1922E;
+   }
+   .nav-link{
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
    }
 </style>

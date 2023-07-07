@@ -3,7 +3,7 @@
    <div id="journal" class="text-left paddsection mt-5">
       <div class="container">
          <div class="section-title text-center">
-            <h2>Blog</h2>
+            <h2>Noticias</h2>
          </div>
       </div>
       <div class="container">

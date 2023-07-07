@@ -4,7 +4,7 @@
          <div class="container">
             <div class="row justify-content-center">
                <div class="col-lg-8 text-center">
-                  <h2 data-aos="fade-down">Carolina fagerström</h2>
+                  <h2 data-aos="fade-down">Carolina Fagerström</h2>
                   <p data-aos="fade-up">Pianista y compositora apasionada por la música clásica y contemporánea</p>
                   <!-- <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Conócenos</a> -->
                </div>
