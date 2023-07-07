@@ -133,6 +133,7 @@ export default {
    }
    #portfolio {
    padding: 60px 0;
+   background-color: #CCC6BE;
    }
    #portfolio #portfolio-flters {
    padding: 0;

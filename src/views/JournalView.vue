@@ -48,7 +48,8 @@
    }
    /* main content */
    #journal {
-   background: #F7F7F7;
+      background-color: #CCC6BE;
+
    padding-top: 5rem;
    }
    #journal .journal-block .journal-info {

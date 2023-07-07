@@ -27,7 +27,7 @@ export default {
 
 <style>
 body {
-  background: #f7f7f7;
+  background: #4c4c4c;
   color: #898989;
   font-family: "Poppins", helvetica;
   font-size: 15px;

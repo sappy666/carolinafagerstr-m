@@ -84,6 +84,9 @@ export default {
    margin: 0 0 20px 0;
    padding: 0;
    }
+   #journal{
+      background-color: #CCC6BE;
+   }
    #journal-blog {
    padding-top: 140px;
    }
