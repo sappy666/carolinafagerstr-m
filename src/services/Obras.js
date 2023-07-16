@@ -2,7 +2,7 @@
 export class Obras{
   static obras = [
     {
-      "id": 0,
+      "id": 8,
       // "title": "",
       "type": "video",
       // "img": require(""),
@@ -11,7 +11,7 @@ export class Obras{
       "link": "https://www.youtube.com/embed/ExMbyvklNiY?controls=0"
     },
     {
-      "id": 1,
+      "id": 7,
       // "title": "",
       "type": "concierto",
       // "img": require(""),
@@ -20,7 +20,7 @@ export class Obras{
       "link": "https://www.youtube.com/embed/Y2gMd5PTVHg?controls=0"
     },
     {
-      "id": 2,
+      "id": 6,
       // "title": "",
       "type": "video",
       // "img": require(""),
@@ -29,7 +29,7 @@ export class Obras{
       "link": "https://www.youtube.com/embed/biZ5AS9Uijo?controls=0"
     },
     {
-      "id": 3,
+      "id": 5,
       // "title": "",
       "type": "video",
       // "img": require(""),
@@ -47,7 +47,7 @@ export class Obras{
       "link": "https://www.youtube.com/embed/H-SMsNt2esk?controls=0"
     },
     {
-      "id": 5,
+      "id": 3,
       // "title": "",
       "type": "video",
       // "img": require(""),
@@ -56,7 +56,7 @@ export class Obras{
       "link": "https://www.youtube.com/embed/1HVKFvk1u7M?controls=0"
     },
     {
-      "id": 6,
+      "id": 2,
       // "title": "",
       "type": "video",
       // "img": require(""),
@@ -65,7 +65,7 @@ export class Obras{
       "link": "https://www.youtube.com/embed/AfFyTADLlnI?controls=0"
     },
     {
-      "id": 7,
+      "id": 1,
       // "title": "",
       "type": "concierto",
       // "img": require(""),
@@ -74,7 +74,7 @@ export class Obras{
       "link": "https://www.youtube.com/embed/1C5Nmo1qWnM?controls=0"
     },
     {
-      "id": 8,
+      "id": 0,
       // "title": "",
       "type": "concierto",
       // "img": require(""),

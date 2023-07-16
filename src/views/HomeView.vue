@@ -1,19 +1,10 @@
 <template>
-   <section id="hero" class="hero">
-      <div class="info d-flex align-items-center">
-         <div class="container">
-            <div class="row justify-content-center">
-               <div class="col-lg-8 text-center">
-                  <h2 data-aos="fade-down">Carolina Fagerström</h2>
-                  <p data-aos="fade-up">Pianista y compositora apasionada por la música clásica y contemporánea</p>
-                  <!-- <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Conócenos</a> -->
-               </div>
-            </div>
-         </div>
+   <section id="hero">
+      <div class="info">
+         <h2>Carolina Fagerström</h2>
+         <p>Pianista y compositora apasionada por la música clásica y contemporánea</p>
       </div>
    </section>
-   <div class="py-5"></div>
-   <!-- End Hero Section -->
    <SobremiComp/>
    <JournalComp/>
    <ContactoComp/>
@@ -24,62 +15,44 @@
    import ContactoComp from "@/components/ContactoComp.vue"
    
    export default {
-       name: "HomeView",
-       components: {
-      SobremiComp,
-       JournalComp,
-       ContactoComp,
-      },
+      name: "HomeView",
+      components: {
+         SobremiComp,
+         JournalComp,
+         ContactoComp,
+      }
    }
 </script>
 <style scoped>
    #hero {
-   width: 100%;
-   height: 100vh;
-   /* background: #404040; */
-   /* overflow: hidden; */
-   position: relative;
-   overflow-x: hidden;
-   padding: 0;
-   background-image: url("../assets/fondo3.jpg");
-   background-size: cover;
-   font-family: "Poppins", helvetica;
+      height: 150vh;
+      background-image: url("../assets/fondo3.jpg");
+      background-size: cover;
+      font-family: "Poppins", helvetica;
+      overflow-x: hidden;
+      position: relative;
    }
-   @media (max-height: 500px) {
-   #hero {
-   height: 150vh;
-   }
-   }
-   #hero {
-   position: absolute;
-   top: 0;
-   right: 0;
-   left: 0;
-   bottom: 0;
-   }
-   #hero .container {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: absolute;
-   bottom: 0;
-   top: 70px;
-   left: 100px;
-   right: 100px;
-   }
-   #hero .container {
-   text-align: center;
+   #hero .info{
+      text-align: center;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      position: absolute;
    }
    #hero h2 {
-   color: #fff;
-   margin-bottom: 30px;
-   font-size: 48px;
-   font-weight: 700;
+      color: #d7d7d7;
+      margin-bottom: 30px;
+      font-weight: 700;
    }
    #hero p {
-   /* width: 100%; */
-   /* margin: 0 auto 30px auto; */
-   color: #d7d7d7;
-   font-family: "Poppins", helvetica;
+      color: #d7d7d7;
+   }
+   @media (min-height: 500px) {
+      #hero {
+         height: 95vh;
+      }
+      #hero h2{
+         font-size: 48px; 
+      }
    }
 </style>
