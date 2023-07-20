@@ -10,18 +10,28 @@
    <ContactoComp/>
 </template>
 <script>
-   import SobremiComp from "@/components/SobremiComp.vue"
-   import JournalComp from "@/components/JournalComp.vue"
-   import ContactoComp from "@/components/ContactoComp.vue"
-   
-   export default {
-      name: "HomeView",
-      components: {
-         SobremiComp,
-         JournalComp,
-         ContactoComp,
-      }
+import SobremiComp from "@/components/SobremiComp.vue"
+import JournalComp from "@/components/JournalComp.vue"
+import ContactoComp from "@/components/ContactoComp.vue"
+
+export default {
+   name: "HomeView",
+   components: {
+      SobremiComp,
+      JournalComp,
+      ContactoComp,
+   },
+   updated(){
+      var section = this.$router.currentRoute.value.hash.replace("#", "");
+      if (section)
+         this.$nextTick(()=> window.document.getElementById(section).scrollIntoView());
+   },
+   mounted(){
+      // var section = this.$router.currentRoute.value.hash.replace("#", "");
+      // if (section)
+      //    this.$nextTick(()=> window.document.getElementById(section).scrollIntoView());
    }
+}
 </script>
 <style scoped>
    #hero {

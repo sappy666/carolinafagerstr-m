@@ -94,6 +94,7 @@
    width: 100%;
    padding-top: 10rem;
    padding-bottom: 5rem;
+   scroll-margin: -40px;
    }
    .contact-details {
    list-style: none;

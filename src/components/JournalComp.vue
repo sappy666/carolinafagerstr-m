@@ -42,7 +42,6 @@ export default {
          this.cargando = true;
          this.entradas = Entradas.getEntradasCant(3);
          this.cargando = false;
-         console.log(this.entradas);
       } catch (error) {
          console.error(error);
       }

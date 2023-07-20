@@ -25,15 +25,15 @@ export default {
     FooterComp,
     TopArrow
   },
-  updated() {
-      var section=this.$router.currentRoute.value.hash.replace("#", "");
-      if (section)
-        this.$nextTick(()=> window.document.getElementById(section).scrollIntoView());
+  updated(){
+    var section = this.$router.currentRoute.value.hash.replace("#", "");
+    if (section)
+      this.$nextTick(()=> window.document.getElementById(section).scrollIntoView());
   },
   mounted(){
-      var section=this.$router.currentRoute.value.hash.replace("#", "");
-      if (section)
-        this.$nextTick(()=> window.document.getElementById(section).scrollIntoView());
+    window.addEventListener('scroll',()=>{
+      this.$router.push(this.$router.currentRoute.value.path);
+    });
   }
 }
 </script>

@@ -38,7 +38,7 @@
    }
    #about {
       padding: 100px 0;
-      scroll-padding-top: 50px;
+      scroll-margin: 40px;
    }
    #about .div-img-bg {
       padding-bottom: 30px;

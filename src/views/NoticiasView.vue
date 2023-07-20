@@ -40,10 +40,6 @@ export default {
       } catch (error) {
          console.error(error);
       }
-  },
-  mounted() {
-  },
-  methods: {
   }
 };
 </script>
