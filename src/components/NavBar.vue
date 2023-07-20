@@ -28,6 +28,7 @@
                         </ul>
                      </li>
                      <li><router-link class="nav-link" to="/#contact">Contacto</router-link></li>
+                     <li><div class="nav-link">EN</div></li>
                   </ul>
                   <i class="bi bi-list mobile-nav-toggle"></i>
                </nav>

@@ -11,11 +11,6 @@
    }
 </script>
 <style scoped>
-   body {
-   background: #fff;
-   color: #666666;
-   font-family: 'DM Sans', sans-serif;
-   }
    a {
    color: #D1922E;
    transition: 0.5s;

@@ -54,7 +54,7 @@
       object-fit: cover;
    }
    #about .about-descr .p-heading {
-      font-family: "Playfair Display", serif;
+      font-family: var(--font-terciary);
       font-size: 28px;
       margin-bottom: 30px;
    }

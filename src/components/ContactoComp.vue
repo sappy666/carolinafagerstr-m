@@ -163,8 +163,15 @@
    }
    }
    .btn.btn.btn-send{
-      color: #fff;
-   background: #D1922E;
-   font-family: 'DM Sans', sans-serif;
+      background-color: #d1922e;
+      color:#f7f7f7;
+      font-weight: 600;
+      border-radius: .375em;
+      transition: all ease .8s;
+   }
+   .btn.btn.btn-send:hover{
+      color: #d1922e;
+      background-color: #f7f7f7;
+      border: 1px solid #d1922e;
    }
 </style>

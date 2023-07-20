@@ -5,6 +5,9 @@
   <FooterComp/>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 </template>
 
@@ -21,15 +24,30 @@ export default {
     NavBar,
     FooterComp,
     TopArrow
+  },
+  updated() {
+      var section=this.$router.currentRoute.value.hash.replace("#", "");
+      if (section)
+        this.$nextTick(()=> window.document.getElementById(section).scrollIntoView());
+  },
+  mounted(){
+      var section=this.$router.currentRoute.value.hash.replace("#", "");
+      if (section)
+        this.$nextTick(()=> window.document.getElementById(section).scrollIntoView());
   }
 }
 </script>
 
 <style>
+:root{
+  --font-primary:"Poppins", helvetica;
+  --font-secondary:'Montserrat', sans-serif;
+  --font-terciary: "Playfair Display", serif;
+}
 body {
-  background: #4c4c4c;
-  color: #898989;
-  font-family: "Poppins", helvetica;
+  background: #fff;
+  color: #333;
+  font-family: var(--font-primary);
   font-size: 15px;
   font-weight: 300;
   line-height: 20px;
@@ -39,7 +57,6 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
 h1,
 h2,
 h3,
@@ -47,6 +64,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  font-family: var(--font-secondary);
 }
 
 h2 {
@@ -63,12 +81,10 @@ h4 {
 a {
   color: #D1922E;
   text-decoration: none !important;
-  transition: all 0.5s ease-in-out 0s;
   cursor: pointer;
 }
 
 a:hover {
-  transition: all 0.5s ease-in-out 0s;
   color: #D1922E;
 }
 
@@ -76,7 +92,7 @@ p {
   margin: 25px 0;
   padding: 0;
   font-size: 15px;
-  color: #999999;
+  color: #555555;
   line-height: 28px;
 }
 
