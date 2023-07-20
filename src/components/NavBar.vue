@@ -4,7 +4,7 @@
          <div class="row justify-content-center align-items-center">
             <div class="col-xl-11 d-flex align-items-center justify-content-between">
                <!-- <h2 class="logo"><a href="../views/HomeView.vue">Carolina fagerström</a></h2> -->
-               <a href="index.html" class="logo"><img src="../assets/logo2.png" alt="" class="img-fluid"></a>
+               <router-link to="/" class="logo"><img src="../assets/logo2.png" alt="" class="img-fluid"></router-link>
                <nav id="navbar" class="navbar">
                   <ul>
                      <li><router-link class="nav-link active" to="/">Inicio</router-link></li>
