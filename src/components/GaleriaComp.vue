@@ -118,7 +118,7 @@ export default {
    }
    p {
    padding: 0;
-   margin: 0 0 30px 0;
+   /* margin: 0 0 30px 0; */
    }
    h1,
    h2,
@@ -126,24 +126,23 @@ export default {
    h4,
    h5,
    h6 {
-   font-family: 'DM Serif Display', serif;
    font-weight: 600;
-   margin: 0 0 20px 0;
+   margin: 0 0 0 0;
    padding: 0;
    }
    #portfolio {
-   padding: 60px 0;
+   /* padding: 60px 0; */
    background-color: #fff;
    }
    #portfolio #portfolio-flters {
    padding: 0;
-   margin: 5px 0 35px 0;
+   margin: 0 0 35px 0;
    list-style: none;
    text-align: center;
    }
    #portfolio #portfolio-flters li {
    cursor: pointer;
-   margin: 15px 15px 15px 0;
+   margin: 0 15px 15px 0;
    display: inline-block;
    padding: 10px 20px;
    font-size: 12px;
@@ -152,7 +151,7 @@ export default {
    border-radius: 4px;
    text-transform: uppercase;
    background: #fff;
-   margin-bottom: 5px;
+   /* margin-bottom: 5px; */
    transition: all 0.3s ease-in-out;
    }
    #portfolio #portfolio-flters li:hover,

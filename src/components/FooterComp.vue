@@ -8,7 +8,7 @@
                </div>
                <div class="col-lg-3 col-md-6 footer-links ms-5">
                   <h4>Sitio</h4>
-                  <ul>
+                  <ul class="mt-3">
                      <li class="mt-1"><i class="bi bi-chevron-right"></i><router-link class="nav-link" to="/"> Inicio</router-link></li>
                      <li><i class="bi bi-chevron-right"></i><router-link class="nav-link" to="/#about"> Sobre Mi</router-link></li>
                      <li><i class="bi bi-chevron-right"></i><router-link class="nav-link" to="/journal"> Obras</router-link></li>

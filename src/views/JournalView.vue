@@ -33,10 +33,10 @@
    h4,
    h5,
    h6 {
-   font-family: 'DM Serif Display', serif;
    font-weight: 600;
    margin: 0 0 20px 0;
    padding: 0;
+   
    }
    #journal-blog {
    padding-top: 140px;
@@ -51,7 +51,12 @@
    margin-bottom: 30px;
    }
    h2{
-   margin-bottom: 3rem;
+   font-weight: 600;
+   margin-bottom:3rem;
+   padding: 0;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   font-size: 25px;
    }
    #journal,
    #journal-blog {

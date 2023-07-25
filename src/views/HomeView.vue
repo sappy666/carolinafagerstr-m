@@ -63,9 +63,12 @@ export default {
       position: absolute;
    }
    #hero h2 {
-      color: #d7d7d7;
+      color: #f4f4f4;
       margin-bottom: 30px;
       font-weight: 700;
+      letter-spacing: 2px;
+      font-family: "Poppins", helvetica;
+
    }
    #hero p {
       color: #d7d7d7;

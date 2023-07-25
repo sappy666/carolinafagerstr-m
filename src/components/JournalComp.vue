@@ -81,6 +81,9 @@ a:focus {
    font-weight: 600;
    margin-bottom:3rem;
    padding: 0;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   font-size: 25px;
 }
 #journal .journal-info{
    margin-bottom: 5px;

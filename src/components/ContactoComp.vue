@@ -111,10 +111,15 @@
    h4,
    h5,
    h6 {
-   font-family: 'DM Serif Display', serif;
    font-weight: 600;
    margin: 0 0 20px 0;
    padding: 0;
+   text-transform: uppercase;
+   }
+   h2{
+      font-weight: 600;
+      font-size: 28px;
+      letter-spacing: 2px;
    }
    #contact {
    height: auto;
