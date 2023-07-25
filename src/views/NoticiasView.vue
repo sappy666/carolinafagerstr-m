@@ -33,6 +33,7 @@ export default {
    } 
   },
   async created(){
+   window.scrollTo({ top: 0, behavior: 'instant' });
       try {
          this.cargando = true;
          this.entradas = Entradas.getEntradas();

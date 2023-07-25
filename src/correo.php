@@ -12,15 +12,14 @@ $header .= "X-Mailer: PHP/" . phpversion();
 $mail = @mail($destino, $asunto, $msg, $header);
 
 if($mail){
-  echo "<h1>EXITO</h1>";
+  echo '<h1>MENSAJE ENVIADO CON EXITO</h1>'
   echo $remitente;
   echo $destino;
   echo $asunto;
   echo $msg;
-  //header("Location: https://www.carolinapalacios.cl/");
+  // header("Location: https://www.carolinapalacios.cl/");
 }
 else{
-  echo "NO EXITO";
-  //header("Location: https://www.carolinapalacios.cl/");
+  // header("Location: https://www.carolinapalacios.cl/");
 }
 ?>

@@ -27,9 +27,22 @@ export default {
          this.$nextTick(()=> window.document.getElementById(section).scrollIntoView());
    },
    mounted(){
-      // var section = this.$router.currentRoute.value.hash.replace("#", "");
-      // if (section)
-      //    this.$nextTick(()=> window.document.getElementById(section).scrollIntoView());
+      var section = this.$router.currentRoute.value.hash.replace("#", "");
+      if (section)
+         this.$nextTick(()=> window.document.getElementById(section).scrollIntoView());
+
+         window.addEventListener("click", () => {
+            const lang = document.documentElement.lang; 
+            const heroText = document.querySelector("#hero p");
+            if (heroText != null){
+               if( lang == 'es'){
+                  heroText.innerText = "Pianista y compositora apasionada por la música clásica y contemporánea";
+               }
+               else if(lang == 'en'){
+                  heroText.innerText = "A pianist and composer passionate about classical and contemporary music.";
+               }
+            }
+         });
    }
 }
 </script>

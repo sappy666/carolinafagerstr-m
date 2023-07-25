@@ -19,20 +19,13 @@
                            <li>
                               <router-link class="nav-link" to="/journal">Multimedia</router-link>
                            </li>
-                           <!-- <li>
-                              <router-link class="nav-link" to="/journal">Concursos</router-link>
-                           </li>
-                           <li>
-                              <router-link class="nav-link" to="/journal">Multimedia</router-link>
-                           </li> -->
                         </ul>
                      </li>
                      <li><router-link class="nav-link" to="/#contact">Contacto</router-link></li>
-                     <!-- <li><div class="nav-link">EN</div></li> -->
+                     <li><div id="btn-language" class="nav-link">EN</div></li>
                   </ul>
                   <i class="bi bi-list mobile-nav-toggle"></i>
                </nav>
-               <!-- .navbar -->
             </div>
          </div>
       </div>
@@ -41,29 +34,59 @@
 </template>
 <script>
    export default {
-      name: 'NavBar', 
+      name: 'NavBar',
+
       mounted() {
-         // Momento de cargar la pagina
-         // if(window.screenY >= 50){
-         //    document.getElementById("header").style.backgroundColor = "#111111";
-         // }
-         // else{
-         //    document.getElementById("header").style.backgroundColor = "transparent";
-         // }
-         // // Eventos SCROLL
-         // window.addEventListener("scroll", ()=>{
-         //    if(window.scrollY >= 100){
-         //       document.getElementById("header").style.backgroundColor = "#111111";
-         //    }
-         //    else{
-         //       document.getElementById("header").style.backgroundColor = "transparent";
-         //    }
-         // });
+         const btnLanguage = document.getElementById("btn-language");
+         const navlinks = document.querySelectorAll(".nav-link");
+         btnLanguage.addEventListener("click", () => {
+            this.lang = document.documentElement.lang; 
+            if( this.lang == 'es'){
+               btnLanguage.innerText = "es";
+               navlinks[0].innerText = "Home";
+               navlinks[1].innerText = "About me";
+               navlinks[2].innerText = "News";
+               navlinks[3].innerText = "My Work";
+               navlinks[4].innerText = "Concerts";
+               navlinks[5].innerText = "Multimedia";
+               navlinks[6].innerText = "Contact";
+               document.documentElement.setAttribute("lang", "en");
+            }
+            else if(this.lang == 'en'){
+               btnLanguage.innerText = "en";
+               navlinks[0].innerText = "Inicio";
+               navlinks[1].innerText = "Sobre mi";
+               navlinks[2].innerText = "Noticias";
+               navlinks[3].innerText = "Obras";
+               navlinks[4].innerText = "Conciertos";
+               navlinks[5].innerText = "Multimedia";
+               navlinks[6].innerText = "Contacto";
+               document.documentElement.setAttribute("lang", "es");
+            }
+         });
+         navlinks[0].addEventListener("click",()=>{
+            Array.from(navlinks).forEach(l =>{
+               l.classList.remove("active");
+            });
+            navlinks[0].classList.add("active");
+         });
+         navlinks[2].addEventListener("click",()=>{
+            Array.from(navlinks).forEach(l =>{
+               l.classList.remove("active");
+            });
+            navlinks[2].classList.add("active");
+         });
+         navlinks[3].addEventListener("click",()=>{
+            Array.from(navlinks).forEach(l =>{
+               l.classList.remove("active");
+            });
+            navlinks[3].classList.add("active");
+         });
       }
    }
 </script>
-<style scoped>
 
+<style scoped>
    a {
    color: #D1922E;
    transition: 0.5s;
@@ -273,5 +296,13 @@
    }
    .navbar-mobile .dropdown>.dropdown-active {
    display: block;
+   }
+   #btn-language{
+      color: #fff;
+      margin-left: 1rem;
+      text-transform: uppercase;
+      font-size: .9rem;
+      font-weight: 600;
+      cursor: pointer;
    }
 </style>

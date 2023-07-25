@@ -2,7 +2,8 @@
    <div id="journal" class="text-left paddsection pt-5">
       <div class="container">
          <div class="section-title text-center">
-            <h2>Noticias</h2>
+            <h2 v-if="this.language == 'es'">Noticias</h2>
+            <h2 v-if="this.language == 'en'">News</h2>
          </div>
       </div>
       <div class="container">
@@ -13,14 +14,17 @@
                      <a :href="entrada.link"><img :src="entrada.img" class="img-responsive" alt="img"></a>
                   </div>
                   <div class="journal-txt">
-                     <h3><a :href="entrada.link">{{ entrada.title }}</a></h3>
+
+                     <h3 v-if="this.language == 'es'"><a :href="entrada.link">{{ entrada.title }}</a></h3>
+                     <h3 v-if="this.language == 'en'"><a :href="entrada.link">{{ entrada.titleEn }}</a></h3>
                      <p class="separator">{{entrada.text}}</p>  
                   </div>
                </div>
             </div>
          </div>
       </div>
-      <div class="btn-mas-noticias"><router-link to="/noticias">Ver más</router-link></div>
+      <div v-if="this.language == 'es'" class="btn-mas-noticias"><router-link to="/noticias">Ver más</router-link></div>
+      <div v-if="this.language == 'en'" class="btn-mas-noticias"><router-link to="/noticias">Read more</router-link></div>
    </div>
 </template>
 <script>
@@ -34,10 +38,12 @@ export default {
   data(){
    return {
       entradas: [],
-      cargando : false
+      cargando : false,
+      language : false
    } 
   },
   async created(){
+      this.language = document.documentElement.lang
       try {
          this.cargando = true;
          this.entradas = Entradas.getEntradasCant(3);
@@ -46,7 +52,14 @@ export default {
          console.error(error);
       }
   },
-  mounted() {
+   updated() {
+      
+      
+  },
+  mounted(){
+      window.addEventListener("click", ()=>{
+         this.language = document.documentElement.lang
+      });
   },
   methods: {
   }

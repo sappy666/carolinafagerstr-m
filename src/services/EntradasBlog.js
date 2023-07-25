@@ -3,6 +3,7 @@ export class Entradas{
   {
   "id": 9,
   "title": "A toda cuerda concluyó el festival clásico del eclipse",
+  "titleEn": "The classic eclipse festival came to a close with great enthusiasm.",
   "type": "festival",
   "img": require("../assets/15.jpg"),
   "date": "0",
@@ -12,6 +13,7 @@ export class Entradas{
   {
   "id": 8,
   "title": "Obtención Primer lugar",
+  "titleEn": "Obtaining First Placer",
   "type": "noticia",
   "img": require("../assets/06.jpg"),
   "date": "2022",
@@ -21,6 +23,7 @@ export class Entradas{
   {
   "id": 7,
   "title": "Festival Puente 2022 IV versión",
+  "titleEn": "Festival Puente 2022 IV Edition",
   "type": "festival",
   "img": require("../assets/11.jpg"),
   "date": "15 Noviembre 2022",
@@ -30,6 +33,7 @@ export class Entradas{
   {
   "id": 6,
   "title": "Conciertos de la tarde en el Parque: obras chilenas y 𝗕𝗿𝗮𝗵𝗺𝘀",
+  "titleEn": "Afternoon Concerts in the Park: Chilean Works and 𝗕𝗿𝗮𝗵𝗺𝘀",
   "type": "Concierto",
   "img": require("../assets/09.jpg"),
   "date": "3 Noviembre 2020",
@@ -39,6 +43,7 @@ export class Entradas{
   {
   "id": 5,
   "title": "Conciertos de tarde",
+  "titleEn": "Afternoon Concerts",
   "type": "Concierto",
   "img": require("../assets/13.jpg"),
   "date": "20 Octubre 2020",
@@ -48,6 +53,7 @@ export class Entradas{
   {
   "id": 4,
   "title": "Conciertos de tarde",
+  "titleEn": "Afternoon Concerts",
   "type": "Concierto",
   "img": require("../assets/03.jpg"),
   "date": "1 Octubre 2020",
@@ -57,6 +63,7 @@ export class Entradas{
   {
   "id": 3,
   "title": "Conciertos en casa",
+  "titleEn": "At-home Concerts",
   "type": "Concierto",
   "img": require("../assets/10.jpg"),
   "date": "4 Abril 2020",
@@ -66,6 +73,7 @@ export class Entradas{
   {
   "id": 2,
   "title": "Conciertos de fin de semana",
+  "titleEn": "Weekend Concerts",
   "type": "Concierto",
   "img": require("../assets/12.jpg"),
   "date": "21 Marzo 2020",
@@ -75,6 +83,7 @@ export class Entradas{
   {
   "id": 1,
   "title": "Mujeres en la música",
+  "titleEn": "Women in Music",
   "type": "Concierto",
   "img": require("../assets/04.jpeg"),
   "date": "25 Agosto 2019",
@@ -84,6 +93,7 @@ export class Entradas{
   {
   "id": 0,
   "title": "Premio a la música nacional",
+  "titleEn": "National Music Award",
   "type": "Premio",
   "img": require("../assets/14.jpg"),
   "date": "3 Mayo 2019",

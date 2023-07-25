@@ -25,10 +25,8 @@ export default {
     FooterComp,
     TopArrow
   },
-  updated(){
-    var section = this.$router.currentRoute.value.hash.replace("#", "");
-    if (section)
-      this.$nextTick(()=> window.document.getElementById(section).scrollIntoView());
+  created(){
+    document.documentElement.setAttribute("lang", "es");
   },
   mounted(){
     window.addEventListener('scroll',()=>{

@@ -9,13 +9,13 @@
                <div class="col-lg-3 col-md-6 footer-links ms-5">
                   <h4>Sitio</h4>
                   <ul>
-                     <li><i class="bi bi-chevron-right"></i><router-link class="nav-link" to="/"> Inicio</router-link></li>
+                     <li class="mt-1"><i class="bi bi-chevron-right"></i><router-link class="nav-link" to="/"> Inicio</router-link></li>
                      <li><i class="bi bi-chevron-right"></i><router-link class="nav-link" to="/#about"> Sobre Mi</router-link></li>
                      <li><i class="bi bi-chevron-right"></i><router-link class="nav-link" to="/journal"> Obras</router-link></li>
                   </ul>
                </div>
                <div class="col-lg-3 col-md-6 footer-contact">
-                  <h4>Contactáme</h4>
+                  <h4>Contáctame</h4>
                   <p>
                      <strong><i class="bi bi-telephone"></i> </strong> +56 9 7436 7083<br>
                      <strong><i class="bi bi-envelope"></i> </strong> lanierpal@gmail.com
@@ -36,6 +36,27 @@
 <script>
    export default {
    name: 'FooterComp',
+   mounted(){
+      window.addEventListener("click", ()=> {
+         const lang = document.documentElement.lang;
+         const titles = document.querySelectorAll("#footer h4");
+         const footerLinks = document.querySelectorAll("#footer .nav-link");
+         if(lang == "es"){
+            titles[0].innerHTML = "Sitio";
+            footerLinks[0].innerHTML = "Inicio";
+            footerLinks[1].innerHTML = "Sobre Mi";
+            footerLinks[2].innerHTML = "Obras";
+            titles[1].innerHTML = "contáctame"
+         }
+         if(lang == "en"){
+            titles[0].innerHTML = "WebSite";
+            footerLinks[0].innerHTML = "Home";
+            footerLinks[1].innerHTML = "About Me";
+            footerLinks[2].innerHTML = "My Work";
+            titles[1].innerHTML = "contact me"
+         }
+      });
+   }
    }
 </script>
 <style scoped>

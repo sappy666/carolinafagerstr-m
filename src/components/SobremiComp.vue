@@ -21,6 +21,25 @@
 <script>
    export default {
       name: "SobremiComp",
+      mounted(){
+         window.addEventListener("click", () => {
+            const lang = document.documentElement.lang; 
+            const aboutTitle = document.querySelector(".p-heading");
+            const aboutText = document.querySelector(".separator");
+            if(aboutTitle != null && aboutText != null){
+
+           
+               if( lang == 'es'){
+                  aboutTitle.innerText = "Pianista y compositora Viñamarina, estudió en el Instituto de Música de la Pontificia Universidad Católica de Valparaíso la cátedra de piano clásico";
+                  aboutText.innerText = "Especializada en Música Docta, ha interpretado en diferentes escenarios de la V Región, con un variado repertorio de obras para piano, interpretando a Wolfgang Amadeus Mozart en su 250 aniversario de muerte y Franz Schubert en el Teatro Municipal de Valparaíso. También ha destacado su participación como miembro del jurado en el Concurso Claudio Arrau, durante el año 2017. Se ha dedicado por más de una década a la docencia, destacando a sus alumnos en conciertos anuales. Ha compuesto obras para orquesta de cuerdas y coro, siento interpretada por la Orquesta Marga Marga durante el año 2016.";
+               }
+               else if(lang == 'en'){
+                  aboutTitle.innerText = "A pianist and composer from Viña del Mar, studied classical piano at the Institute of Music of the Pontifical Catholic University of Valparaíso.";
+                  aboutText.innerText = "Specialized in Classical Music, she has performed on various stages in the V Region, with a diverse repertoire of piano works, including interpretations of Wolfgang Amadeus Mozart on the 250th anniversary of his death and Franz Schubert at the Municipal Theater of Valparaíso. Her notable participation as a jury member in the Claudio Arrau Competition in 2017 has been recognized. She has been dedicated to teaching for over a decade, and her students have excelled in annual concerts. She has also composed pieces for string orchestra and choir, which were performed by the Marga Marga Orchestra in 2016.";
+               }
+            }
+         });
+      }
    }
 </script>
 <style scoped>
