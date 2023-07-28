@@ -36,31 +36,19 @@ export default {
     };
   },
    async created(){
-      try{
-         this.cargando = true;
-         this.obras = Obras.getObras();
-         this.cargando = false;
-      }
-      catch(e){
-         console.log("Error al cargar obras...");
-      }
-   }, 
-   mounted() {
-      const filtros = document.getElementsByClassName("filtro"); // Botones de filtros
-      Array.from(filtros).forEach(element => {  // Recorre botones para agregar evento click
-         element.addEventListener("click", (e)=>{ 
-            let seleccionado = e.target.attributes["data-filter"].value; // Filtro seleccionado
-            const tarjetas = document.getElementsByClassName("portfolio-item") // Tarjetas cargadas (Todas)
+      function seleccionarFiltro(filterName) {
+         const filtros = document.querySelectorAll(".filtro") // Botones de filtros
+         const tarjetas = document.querySelectorAll(".portfolio-item") // Tarjetas cargadas (Todas)
             // Quitar marca de filtro activo
-            Array.from(filtros).forEach( btn =>{
+            filtros.forEach( btn =>{
                   btn.classList.remove("filter-active");
             });
             // SELECCION DE CONCIERTOS
-            if (seleccionado == "filtro--conciertos"){
+            if (filterName == "filtro--conciertos"){
                // Marcar boton activo
                document.querySelector('[data-filter="filtro--conciertos"]').classList.add("filter-active");
                // Recorre las tarjetas, para modificar clases
-               Array.from(tarjetas).forEach(tarjeta =>{ 
+               tarjetas.forEach(tarjeta =>{ 
                   if(tarjeta.attributes["data-type"].value != "concierto"){
                      tarjeta.classList.add("noVisible");
                   }
@@ -70,11 +58,11 @@ export default {
                });
             }
             // SELECCION DE VIDEOS
-            else if (seleccionado == "filtro--videos"){
+            else if (filterName == "filtro--videos"){
                // Marcar boton activo
                document.querySelector('[data-filter="filtro--videos"]').classList.add("filter-active");
                // Recorre las tarjetas, para modificar clases
-               Array.from(tarjetas).forEach(tarjeta =>{ // Recorre las tarjetas, para modificar clases
+               tarjetas.forEach(tarjeta =>{ // Recorre las tarjetas, para modificar clases
                   if(tarjeta.attributes["data-type"].value != "video"){
                      tarjeta.classList.add("noVisible");
                   }
@@ -84,23 +72,123 @@ export default {
                });
             }
             // SELECCION DE TODOS
-            else if(seleccionado == "filtro--todos"){ // Recorre las tarjetas, para modificar clases
+            else if(filterName == "filtro--todos"){ // Recorre las tarjetas, para modificar clases
                // Marcar boton activo
                document.querySelector('[data-filter="filtro--todos"]').classList.add("filter-active");
                // Recorre las tarjetas, para modificar clases
-               Array.from(tarjetas).forEach(tarjeta =>{
+               tarjetas.forEach(tarjeta =>{
                   tarjeta.classList.remove("noVisible");
                });
             }
             else{
                console.log("Opcion no valida")
             }
+         
+      }
+      try{
+         this.cargando = true;
+         this.obras = Obras.getObras();
+         this.cargando = false;
+         
+         let section = this.$router.currentRoute.value.hash.replace("#", "");
+         if(section){
+            seleccionarFiltro("filtro--"+section);
+         }
+      }
+      catch(e){
+         console.log("Error al cargar obras...");
+      }
+      
+   }, 
+   mounted() {
+      function seleccionarFiltro(filterName) {
+         const tarjetas = document.querySelectorAll(".portfolio-item") // Tarjetas cargadas (Todas)
+            // Quitar marca de filtro activo
+            filtros.forEach( btn =>{
+                  btn.classList.remove("filter-active");
+            });
+            // SELECCION DE CONCIERTOS
+            if (filterName == "filtro--conciertos"){
+               // Marcar boton activo
+               document.querySelector('[data-filter="filtro--conciertos"]').classList.add("filter-active");
+               // Recorre las tarjetas, para modificar clases
+               tarjetas.forEach(tarjeta =>{ 
+                  if(tarjeta.attributes["data-type"].value != "concierto"){
+                     tarjeta.classList.add("noVisible");
+                  }
+                  else{
+                     tarjeta.classList.remove("noVisible");
+                  }
+               });
+            }
+            // SELECCION DE VIDEOS
+            else if (filterName == "filtro--videos"){
+               // Marcar boton activo
+               document.querySelector('[data-filter="filtro--videos"]').classList.add("filter-active");
+               // Recorre las tarjetas, para modificar clases
+               tarjetas.forEach(tarjeta =>{ // Recorre las tarjetas, para modificar clases
+                  if(tarjeta.attributes["data-type"].value != "video"){
+                     tarjeta.classList.add("noVisible");
+                  }
+                  else{
+                     tarjeta.classList.remove("noVisible");
+                  }
+               });
+            }
+            // SELECCION DE TODOS
+            else if(filterName == "filtro--todos"){ // Recorre las tarjetas, para modificar clases
+               // Marcar boton activo
+               document.querySelector('[data-filter="filtro--todos"]').classList.add("filter-active");
+               // Recorre las tarjetas, para modificar clases
+               tarjetas.forEach(tarjeta =>{
+                  tarjeta.classList.remove("noVisible");
+               });
+            }
+            else{
+               console.log("Opcion no valida")
+            }
+         
+      }
+
+      // SELECCION DE FILTRO POR BOTONES
+      const filtros = document.querySelectorAll(".filtro") // Botones de filtros
+      filtros.forEach(element => {  // Recorre botones para agregar evento click
+         element.addEventListener("click", (e)=>{ 
+            let seleccionado = e.target.attributes["data-filter"].value; // Filtro seleccionado
+            seleccionarFiltro(seleccionado);
          });
+      });
+
+      // SELECCION DE FILTRO POR NAVBAR
+      window.addEventListener("click", ()=>{
+         let section = this.$router.currentRoute.value.hash.replace("#", "");
+            if(section){
+               seleccionarFiltro("filtro--"+section);
+            }
+      });
+
+      // CAMBIO DE IDIOMA
+      window.addEventListener("click", ()=>{
+         let lang = document.documentElement.lang;
+         const title = document.querySelector("#portfolio h2");
+         if(title != null){
+            if(lang == 'es'){
+               title.innerHTML = "Obras";
+               filtros[0].innerHTML = "Todos";
+               filtros[1].innerHTML = "Conciertos";
+               filtros[2].innerHTML = "Multimedia";
+            }
+            if(lang == 'en'){
+               title.innerHTML = "My Work";
+               filtros[0].innerHTML = "All";
+               filtros[1].innerHTML = "Concerts";
+               filtros[2].innerHTML = "Multimedia";
+            }
+         }
       });
    },
   methods: {
-   
-    },
+   },
 };
 </script>
 <style scoped>
@@ -261,5 +349,8 @@ export default {
    font-weight: 500;
    font-size: 14px;
    text-transform: uppercase;
+   }
+   #portfolio .section-title{
+      margin-bottom: 1rem;
    }
 </style>

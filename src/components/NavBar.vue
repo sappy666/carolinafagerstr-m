@@ -11,20 +11,22 @@
                      <li><router-link class="nav-link" to="/#about">Sobre mí</router-link></li>
                      <li><router-link class="nav-link" to="/noticias">Noticias</router-link></li>
                      <li class="dropdown">
-                        <router-link class="nav-link" to="/journal">Obras<i class="bi bi-chevron-down"></i></router-link>
+                        <router-link class="nav-link" to="/journal#todos">Obras<i class="bi bi-chevron-down"></i></router-link>
                         <ul>
                            <li>
-                              <router-link class="nav-link" to="/journal">Conciertos</router-link>
+                              <router-link class="nav-link" to="/journal#conciertos">Conciertos</router-link>
                            </li>
                            <li>
-                              <router-link class="nav-link" to="/journal">Multimedia</router-link>
+                              <router-link class="nav-link" to="/journal#videos">Multimedia</router-link>
                            </li>
                         </ul>
                      </li>
                      <li><router-link class="nav-link" to="/#contact">Contacto</router-link></li>
-                     <li><div id="btn-language" class="nav-link">EN</div></li>
+                     <li></li>
                   </ul>
+                  
                   <i class="bi bi-list mobile-nav-toggle"></i>
+                  <div id="btn-language" class="nav-link">EN</div>
                </nav>
             </div>
          </div>

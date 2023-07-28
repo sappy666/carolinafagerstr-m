@@ -160,6 +160,7 @@
    }
    #footer .footer-top .footer-contact p {
    line-height: 26px;
+   color: #888;
    }
    .social__icon{
    color: #D1922E;

@@ -8,6 +8,9 @@
        components: {
       GaleriaComp
       },
+      created(){
+         window.scrollTo({ top: 0, behavior: 'instant' });
+      }
    }
 </script>
 <style scoped>

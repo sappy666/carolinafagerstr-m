@@ -43,7 +43,7 @@ export default {
    } 
   },
   async created(){
-      this.language = document.documentElement.lang
+      this.language = document.documentElement.lang;
       try {
          this.cargando = true;
          this.entradas = Entradas.getEntradasCant(3);
@@ -58,7 +58,7 @@ export default {
   },
   mounted(){
       window.addEventListener("click", ()=>{
-         this.language = document.documentElement.lang
+         this.language = document.documentElement.lang;
       });
   },
   methods: {

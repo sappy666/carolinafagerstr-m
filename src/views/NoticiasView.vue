@@ -3,7 +3,8 @@
    <div id="journal" class="mt-5">
       <div class="container">
          <div class="text-center">
-            <h2>Noticias</h2>
+            <h2 v-if="this.language == 'es'">Noticias</h2>
+            <h2 v-if="this.language == 'en'">News</h2>
          </div>
       </div>
       <div class="container">
@@ -13,7 +14,8 @@
                   <a :href="entrada.link"><img :src="entrada.img" class="img-responsive" alt="img"></a>
                </div>
                <div class="journal-txt">
-                  <h3><a :href="entrada.link">{{ entrada.title }}</a></h3>
+                  <h3 v-if="this.language == 'es'"><a :href="entrada.link">{{ entrada.title }}</a></h3>
+                  <h3 v-if="this.language == 'en'"><a :href="entrada.link">{{ entrada.titleEn }}</a></h3>
                   <p class="separator">{{entrada.text}}</p>  
                </div>
             </div>
@@ -29,11 +31,13 @@ export default {
   data(){
    return {
       entradas: [],
-      cargando : false
+      cargando: false,
+      language: ""
    } 
   },
   async created(){
    window.scrollTo({ top: 0, behavior: 'instant' });
+   this.language = document.documentElement.lang;
       try {
          this.cargando = true;
          this.entradas = Entradas.getEntradas();
@@ -41,6 +45,11 @@ export default {
       } catch (error) {
          console.error(error);
       }
+  },
+  mounted(){
+      window.addEventListener("click", ()=>{
+         this.language = document.documentElement.lang;
+      });
   }
 };
 </script>

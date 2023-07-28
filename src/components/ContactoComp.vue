@@ -59,7 +59,7 @@
    name: 'ContactoComp',
    mounted(){
       window.addEventListener("click", ()=> {
-         const lang = document.documentElement.lang;
+         let lang = document.documentElement.lang;
          const title = document.querySelector("#contact h2");
          const inputs = document.querySelectorAll("input");
          const textArea = document.querySelector("textarea")
@@ -72,7 +72,7 @@
                inputs[2].placeholder = "Asunto";
                textArea.placeholder = "Mensaje";
                inputs[3].value = "Enviar mensaje"
-         }
+            }
             if(lang == "en"){
                title.innerHTML = "Contact";
                inputs[0].placeholder = "Name";
