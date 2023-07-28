@@ -26,6 +26,7 @@
    <!-- End Portfolio Section -->
 </template>
 <script>
+import router from '@/router';
 import {Obras} from '@/services/Obras'
 
 export default {
@@ -150,21 +151,24 @@ export default {
          
       }
 
-      // SELECCION DE FILTRO POR BOTONES
-      const filtros = document.querySelectorAll(".filtro") // Botones de filtros
-      filtros.forEach(element => {  // Recorre botones para agregar evento click
-         element.addEventListener("click", (e)=>{ 
-            let seleccionado = e.target.attributes["data-filter"].value; // Filtro seleccionado
-            seleccionarFiltro(seleccionado);
-         });
-      });
+      
 
       // SELECCION DE FILTRO POR NAVBAR
       window.addEventListener("click", ()=>{
          let section = this.$router.currentRoute.value.hash.replace("#", "");
             if(section){
                seleccionarFiltro("filtro--"+section);
+               router.push(this.$router.currentRoute.value.path);
             }
+      });
+      // SELECCION DE FILTRO POR BOTONES
+      const filtros = document.querySelectorAll(".filtro") // Botones de filtros
+      filtros.forEach(element => {  // Recorre botones para agregar evento click
+         element.addEventListener("click", (e)=>{ 
+            router.push(this.$router.currentRoute.value.path);
+            let seleccionado = e.target.attributes["data-filter"].value; // Filtro seleccionado
+            seleccionarFiltro(seleccionado);
+         });
       });
 
       // CAMBIO DE IDIOMA
