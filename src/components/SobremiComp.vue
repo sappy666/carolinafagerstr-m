@@ -1,21 +1,24 @@
 <template>
    <div id="about" class="container">
-      <div class="row justify-content-center justify-content-lg-between">
-         <div class="col-10 col-lg-4">
-            <div class="div-img-bg">
-               <div class="about-img">
-                  <img src="../assets/piano.jpg" class="img-responsive" alt="me">
+       <div class="row justify-content-center justify-content-lg-between">
+           <div class="col-10 col-lg-4">
+               <div class="div-img-bg">
+                   <div class="about-img">
+                       <img src="../assets/caro.jpg" class="img-responsive" alt="me">
+                   </div>
                </div>
-            </div>
-         </div>
-         <div class="col-10 col-lg-7 mt-5 mt-lg-0 text-center text-lg-start">
-            <div class="about-descr">
-               <p class="p-heading">Pianista y compositora Viñamarina, estudió en el Instituto de Música de la Pontificia Universidad Católica de Valparaíso la cátedra de piano clásico</p>
-               <p class="separator">Especializada en Música Docta, ha interpretado en diferentes escenarios de la V Región, con un variado repertorio de obras para piano, interpretando a Wolfgang Amadeus Mozart en su 250 aniversario de muerte y Franz Schubert en el Teatro Municipal de Valparaíso. También ha destacado su participación como miembro del jurado en el Concurso Claudio Arrau, durante el año 2017. Se ha dedicado por más de una década a la docencia, destacando a sus alumnos en conciertos anuales. Ha compuesto obras para orquesta de cuerdas y coro, siento interpretada por la Orquesta Marga Marga durante el año 2016.</p>
-               <!-- <br><div class="mas__noticias"><a href=""><p>Leer más</p></a></div> -->
-            </div>
-         </div>
-      </div>
+           </div>
+           <div class="col-10 col-lg-7 mt-5 mt-lg-0 text-center text-lg-start">
+               <div class="about-descr">
+                   <p class="p-heading">Carolina Fagerström Conocida también como Carolina Palacios Pianista y compositora de Viña del Mar.</p>
+                   <p class="separator">Comienza sus estudios de piano clásico en el año 2002 en el Conservatorio de PUCV con la profesora María Angélica Belaustegui, dando término a estos, en el año 2011. Dedicándose a la docencia por más de una década, en el año 2016 comienza estudios de composición musical con los profesores Rafael Díaz y Pedro Aguilera. Algunas de sus obras han sido estrenadas por la Orquesta MargaMarga, dirigidas por el Maestro Luis José Recart, también por la Orquesta de cámara de PUCV, dirigidas por el Maestro Pablo Alvarado y también ha compuesto obras escritas para coro femenino estrenadas por Coral femenina de Viña del Mar y dirigidas por la Maestra Jessica Quezada en el II festival Leni Alexandar Valparaíso.
+                       Ha tomado cursos de Composición Musical para medios audiovisuales con el profesor Jorge Aliaga en 2021.
+                       Ganadora del primer lugar en el IX concurso de composición Fundación Orquesta Margamarga, con la Obra Mintaka, para contrabajo en el año 2022.
+                   </p>
+                   <!-- <br><div class="mas__noticias"><a href=""><p>Leer más</p></a></div> -->
+               </div>
+           </div>
+       </div>
    </div>
 </template>
 <script>
@@ -27,15 +30,15 @@
             const aboutTitle = document.querySelector(".p-heading");
             const aboutText = document.querySelector(".separator");
             if(aboutTitle != null && aboutText != null){
-
+   
            
                if( lang == 'es'){
-                  aboutTitle.innerText = "Pianista y compositora Viñamarina, estudió en el Instituto de Música de la Pontificia Universidad Católica de Valparaíso la cátedra de piano clásico";
-                  aboutText.innerText = "Especializada en Música Docta, ha interpretado en diferentes escenarios de la V Región, con un variado repertorio de obras para piano, interpretando a Wolfgang Amadeus Mozart en su 250 aniversario de muerte y Franz Schubert en el Teatro Municipal de Valparaíso. También ha destacado su participación como miembro del jurado en el Concurso Claudio Arrau, durante el año 2017. Se ha dedicado por más de una década a la docencia, destacando a sus alumnos en conciertos anuales. Ha compuesto obras para orquesta de cuerdas y coro, siento interpretada por la Orquesta Marga Marga durante el año 2016.";
+                  aboutTitle.innerText = "Carolina Fagerström Conocida también como Carolina Palacios Pianista y compositora de Viña del Mar.";
+                  aboutText.innerText = "Comienza sus estudios de piano clásico en el año 2002 en el Conservatorio de PUCV con la profesora María Angélica Belaustegui, dando término a estos, en el año 2011. Dedicándose a la docencia por más de una década, en el año 2016 comienza estudios de composición musical con los profesores Rafael Díaz y Pedro Aguilera. Algunas de sus obras han sido estrenadas por la Orquesta MargaMarga, dirigidas por el Maestro Luis José Recart, también por la Orquesta de cámara de PUCV, dirigidas por el Maestro Pablo Alvarado y también ha compuesto obras escritas para coro femenino estrenadas por Coral femenina de Viña del Mar y dirigidas por la Maestra Jessica Quezada en el II festival Leni Alexandar Valparaíso. Ha tomado cursos de Composición Musical para medios audiovisuales con el profesor Jorge Aliaga en 2021. Ganadora del primer lugar en el IX concurso de composición Fundación Orquesta Margamarga, con la Obra Mintaka, para contrabajo en el año 2022.";
                }
                else if(lang == 'en'){
-                  aboutTitle.innerText = "A pianist and composer from Viña del Mar, studied classical piano at the Institute of Music of the Pontifical Catholic University of Valparaíso.";
-                  aboutText.innerText = "Specialized in Classical Music, she has performed on various stages in the V Region, with a diverse repertoire of piano works, including interpretations of Wolfgang Amadeus Mozart on the 250th anniversary of his death and Franz Schubert at the Municipal Theater of Valparaíso. Her notable participation as a jury member in the Claudio Arrau Competition in 2017 has been recognized. She has been dedicated to teaching for over a decade, and her students have excelled in annual concerts. She has also composed pieces for string orchestra and choir, which were performed by the Marga Marga Orchestra in 2016.";
+                  aboutTitle.innerText = "Carolina Fagerstrom Also Know as Carolina Palacios is a pianist and composer from Viña del Mar, Chile";
+                  aboutText.innerText = "She began her classical piano studies in 2002 at the PUCV Conservatory with professor María Angélica Belaustegui, finishing them in 2011. After dedicating herself to teaching for over a decade, she began studying musical composition in 2016 with professors Rafael Díaz and Pedro Aguilera. Some of her works has been debuted by the MargaMarga Orchestra, conducted by Maestro Luis José Recart since 2016 as well as by the PUCV Chamber Orchestra, conducted by Maestro Pablo Alvarado. She has also composed pieces written for women's choir, premiered by Coral Femenina de Viña del Mar and conducted by Maestra Jessica Quezada at the II Leni Alexandar Valparaíso Festival in 2019, She has taken courses in Musical Composition for Audiovisual Media with Professor Jorge Aliaga in 2021. Carolina was the winner of first place in the IX Composition Contest of the Margamarga Orchestra Foundation, with her work Mintaka for double bass in November 2022.";
                }
             }
          });
@@ -44,40 +47,40 @@
 </script>
 <style scoped>
    a {
-      color: #D1922E;
-      transition: 0.5s;
-      text-decoration: none;
+   color: #D1922E;
+   transition: 0.5s;
+   text-decoration: none;
    }
    a:hover,
    a:active,
    a:focus {
-      color: #D1922E;
-      outline: none;
-      text-decoration: none;
+   color: #D1922E;
+   outline: none;
+   text-decoration: none;
    }
    #about {
-      padding: 100px 0;
-      scroll-margin: 40px;
+   padding: 100px 0;
+   scroll-margin: 40px;
    }
    #about .div-img-bg {
-      padding-bottom: 30px;
-      border: 20px solid #b8a07e;
+   padding-bottom: 30px;
+   border: 20px solid #b8a07e;
    }
    #about .div-img-bg .about-img img {
-      width: 100%;
-      box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.2);
-      margin-top: -60px;
-      margin-left: 40px;
-      height: 400px;
-      -o-object-fit: cover;
-      object-fit: cover;
+   width: 100%;
+   box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.2);
+   margin-top: -60px;
+   margin-left: 40px;
+   height: 400px;
+   -o-object-fit: cover;
+   object-fit: cover;
    }
    #about .about-descr .p-heading {
-      font-family: var(--font-terciary);
-      font-size: 28px;
-      margin-bottom: 30px;
+   font-family: var(--font-terciary);
+   font-size: 28px;
+   margin-bottom: 30px;
    }
    #about .about-descr .separator {
-      margin-bottom: 0;
+   margin-bottom: 0;
    }
 </style>

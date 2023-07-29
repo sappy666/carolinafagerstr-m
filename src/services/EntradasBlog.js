@@ -1,5 +1,25 @@
 export class Entradas{
   static entradas = [
+    {
+      "id": 11,
+      "title": "Concierto “Mujeres en la Música Coral Chilena” en sala Isidora Zegers",
+      "titleEn": "Concert 'Women in Chilean Choral Music' at the Isidora Zegers Hall.",
+      "type": "festival",
+      "img": require("../assets/17.jpg"),
+      "date": "0",
+      // "text": "La Orquesta Marga Marga se presentó en la jornada final del encuentro de música de cámara realizado en La Serena.",
+      "link": "https://artes.uchile.cl/agenda/206631/concierto-mujeres-en-la-musica-coral-chilena-en-sala-isidora-zegers"
+      },
+    {
+      "id": 10,
+      "title": "Concierto “Mujeres en la Música Coral Chilena” en sala Isidora Zegers",
+      "titleEn": "Concert 'Women in Chilean Choral Music' at the Isidora Zegers Hall.",
+      "type": "festival",
+      "img": require("../assets/16.jpg"),
+      "date": "0",
+      // "text": "La Orquesta Marga Marga se presentó en la jornada final del encuentro de música de cámara realizado en La Serena.",
+      "link": "https://artes.uchile.cl/agenda/206631/concierto-mujeres-en-la-musica-coral-chilena-en-sala-isidora-zegers"
+      },
   {
   "id": 9,
   "title": "A toda cuerda concluyó el festival clásico del eclipse",

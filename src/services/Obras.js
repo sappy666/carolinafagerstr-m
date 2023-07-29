@@ -2,6 +2,42 @@
 export class Obras{
   static obras = [
     {
+      "id": 12,
+      // "title": "",
+      "type": "video",
+      // "img": require(""),
+      // "date": "",
+      // "text": "",
+      "link": "https://youtu.be/3ZP8JN09AB0"
+    },
+    {
+      "id": 11,
+      // "title": "",
+      "type": "video",
+      // "img": require(""),
+      // "date": "",
+      // "text": "",
+      "link": "https://youtu.be/SNEKGDU7WHU"
+    },
+    {
+      "id": 10,
+      // "title": "",
+      "type": "video",
+      // "img": require(""),
+      // "date": "",
+      // "text": "",
+      "link": "https://youtu.be/hkfcHgcmlxM"
+    },
+    {
+      "id": 9,
+      // "title": "",
+      "type": "video",
+      // "img": require(""),
+      // "date": "",
+      // "text": "",
+      "link": "https://youtu.be/1FIXfipLAfU"
+    },
+    {
       "id": 8,
       // "title": "",
       "type": "video",

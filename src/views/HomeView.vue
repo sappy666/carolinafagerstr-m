@@ -2,7 +2,7 @@
    <section id="hero">
       <div class="info">
          <h2>Carolina Fagerström</h2>
-         <p>Pianista y compositora apasionada por la música clásica y contemporánea</p>
+         <p>Pianista y compositora apasionada por la música docta</p>
       </div>
    </section>
    <SobremiComp/>
@@ -36,10 +36,10 @@ export default {
             const heroText = document.querySelector("#hero p");
             if (heroText != null){
                if( lang == 'es'){
-                  heroText.innerText = "Pianista y compositora apasionada por la música clásica y contemporánea";
+                  heroText.innerText = "Pianista y compositora apasionada por la música docta";
                }
                else if(lang == 'en'){
-                  heroText.innerText = "A pianist and composer passionate about classical and contemporary music.";
+                  heroText.innerText = "A pianist and composer passionate about classical music";
                }
             }
          });
@@ -49,7 +49,7 @@ export default {
 <style scoped>
    #hero {
       height: 150vh;
-      background-image: url("../assets/fondo3.jpg");
+      background-image: url("../assets/piano.jpg");
       background-size: cover;
       font-family: "Poppins", helvetica;
       overflow-x: hidden;
