@@ -22,11 +22,10 @@
                         </ul>
                      </li>
                      <li><router-link class="nav-link" to="/#contact">Contacto</router-link></li>
-                     <li></li>
                   </ul>
                   
                   <i class="bi bi-list mobile-nav-toggle"></i>
-                  <div id="btn-language" class="nav-link">EN</div>
+                  <div id="btn-language" class="nav-link ms-1 ms-md-3">EN</div>
                </nav>
             </div>
          </div>
@@ -118,6 +117,7 @@
    }
    .navbar {
    padding: 0;
+     max-width: 100dvw;
    }
    .navbar ul {
    margin: 0;
@@ -301,7 +301,6 @@
    }
    #btn-language{
       color: #fff;
-      margin-left: 1rem;
       text-transform: uppercase;
       font-size: .9rem;
       font-weight: 600;

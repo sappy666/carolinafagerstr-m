@@ -1,7 +1,7 @@
 <template>
    <section id="hero">
       <div class="info">
-         <h2>Carolina Fagerström</h2>
+        <h2>Carolina Fagerström</h2>
          <p>Pianista y compositora apasionada por la música docta</p>
       </div>
    </section>
@@ -49,8 +49,9 @@ export default {
 <style scoped>
    #hero {
       height: 150vh;
-      background-image: url("../assets/piano.jpg");
+      background-image: url("../assets/hero3.png");
       background-size: cover;
+      background-color: '#333';
       font-family: "Poppins", helvetica;
       overflow-x: hidden;
       position: relative;
@@ -67,11 +68,11 @@ export default {
       margin-bottom: 30px;
       font-weight: 700;
       letter-spacing: 2px;
-      font-family: "Poppins", helvetica;
+      font-family: var(--font-terciary),"Poppins", helvetica;
 
    }
    #hero p {
-      color: #d7d7d7;
+      color: #f7f7f7;
    }
    @media (min-height: 500px) {
       #hero {

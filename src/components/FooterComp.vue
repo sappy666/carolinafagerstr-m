@@ -6,7 +6,7 @@
                <div class="col-lg-3 col-md-6 ps-0 footer-info">
                   <router-link class="logo" to="/"><img src="../assets/logo2.png" alt="" width="320"></router-link>
                </div>
-               <div class="col-lg-3 col-md-6 footer-links ms-5">
+               <div class="col-lg-3 col-md-6 footer-links ">
                   <h4>Sitio</h4>
                   <ul class="mt-3">
                      <li class="mt-1"><i class="bi bi-chevron-right"></i><router-link class="nav-link" to="/"> Inicio</router-link></li>
